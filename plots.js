@@ -118,9 +118,40 @@ function buildCharts(sample) {
       type: "indicator",
       mode: "gauge+number",
       gauge: {
-        steps: [{range: [0,10], color: 'cyan'},
-        { range: [250, 400], color: "royalblue" }
-      ]
+        axis: {
+          range: [0,10],
+          tickmode: 'array',
+          tickvals: [2,4,6,8,10]
+        },
+        bar: {
+          color: "blue",
+          line: {
+              color: "red",
+              width: 4
+          }
+        }, 
+        steps: [
+          {
+          range:[0,2],
+          color: 'red' 
+          },
+          {
+            range:[2,4],
+            color: 'orange' 
+          },
+          {
+            range:[4,6],
+            color: 'yellow' 
+          },
+          {
+            range:[6,8],
+            color: 'lawngreen' 
+          },
+          {
+            range:[8,10],
+            color: 'green' 
+          },
+        ]
       }
     }
   ];
