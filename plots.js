@@ -61,7 +61,7 @@ function buildCharts(sample) {
     let resultArray = samplesArray.filter(sampleObj => sampleObj.id == sample);
     //  5. Create a variable that holds the first sample in the array.
     let resultDict = resultArray[0]
- 
+    console.log(samplesArray)
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     let otuIds = resultDict.otu_ids;
     let otuLabels = resultDict.otu_labels;
@@ -81,7 +81,11 @@ function buildCharts(sample) {
       y: list.slice(0,10).reverse(),
       text: otuLabels.slice(0,10).reverse(),
       type: 'bar',
-      orientation: 'h'
+      orientation: 'h',
+      marker: {
+        color: 'orange',
+        width: 1
+      }
     }];
 
     // 9. Create the layout for the bar chart. 
@@ -104,6 +108,9 @@ function buildCharts(sample) {
     }];
     var bubbleLayout = {
       title: 'Top 10 Bacteria Cultures Found',
+      xaxis: {
+        title: 'OTU'
+      }
       };
 
     Plotly.newPlot("bubble",bubbleData, bubbleLayout)

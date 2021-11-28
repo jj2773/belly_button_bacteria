@@ -13,11 +13,18 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+      <div class="col-md-12 jumbotron text-center" style="background-image:url(jumbotronimage.png)">
+        <h1 class="p-3 mb-2 bg-warning"> Belly Button Biodiversity Dashboard</h1>
+        <p class="p-3 mb-2 bg-warning"> Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
+    <div class="container">
+      <div class="row">      
+          <p> Over 100 volunteers provided their washing frequency information and participated in bacterial cultures of their bellybuttons. 
+            Select the Test Subject drop down on the left to see the Top 10 Bacteria cultures found and the reported washing frequency.  This 
+          research was funded in order to find bacteria that tastes like beef for a potential food substitute product.</p>
+        </div>
+      </div>
     <div class="row">
       <div class="col-md-2">
         <div class="well">
@@ -25,7 +32,7 @@
           <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <div class="panel panel-primary">
+        <div class="panel panel-warning">
           <div class="panel-heading">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
